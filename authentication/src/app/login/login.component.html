@@ -3,8 +3,8 @@
         <h1>Velkommen tilbage!</h1>
         
         <form (submit)="login($event)">
-            <input #emailInput type="email" placeholder="E-mail">
-            <input #passwordInput type="password" placeholder="Adgangskode">
+            <input #emailInput type="email" placeholder="E-mail" required>
+            <input #passwordInput type="password" placeholder="Adgangskode" required>
             <button type="submit">Log ind</button>
         </form>
     </div>
