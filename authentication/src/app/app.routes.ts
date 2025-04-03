@@ -3,6 +3,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { VerificationComponent } from './verification/verification.component';
 import { HomeComponent } from './home/home.component';
+import { SuccessComponent } from './success/success.component';
 
 export const routes: Routes = [
     {
@@ -20,5 +21,9 @@ export const routes: Routes = [
     {
         path: "verification",
         component: VerificationComponent
+    },
+    {
+        path: "success",
+        component: SuccessComponent
     }
 ];
