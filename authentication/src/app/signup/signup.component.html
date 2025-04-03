@@ -2,10 +2,10 @@
     <div class="row">
         <h1>Opret en konto</h1>
         
-        <form action="">
-            <input type="email" placeholder="E-mail">
-            <input type="password" placeholder="Adgangskode">
-            <button>Opret konto</button>
+        <form (submit)="signUp($event)">
+            <input #emailInput type="email" placeholder="E-mail" required>
+            <input #passwordInput type="password" placeholder="Adgangskode" required>
+            <button type="submit">Opret konto</button>
         </form>
     </div>
 </section>

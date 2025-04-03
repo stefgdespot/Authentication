@@ -2,10 +2,10 @@
     <div class="row">
         <h1>Velkommen tilbage!</h1>
         
-        <form action="">
-            <input type="email" placeholder="E-mail">
-            <input type="password" placeholder="Adgangskode">
-            <button>Log ind</button>
+        <form (submit)="login($event)">
+            <input #emailInput type="email" placeholder="E-mail">
+            <input #passwordInput type="password" placeholder="Adgangskode">
+            <button type="submit">Log ind</button>
         </form>
     </div>
 </section>
