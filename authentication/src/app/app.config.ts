@@ -25,5 +25,8 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes)]
+  providers: [
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(routes),
+  ]
 };
