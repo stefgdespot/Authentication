@@ -34,11 +34,27 @@ button {
     background-color: white;
     border-radius: 12px;
     font-size: 12px;
-    padding: 5px 0;
+    height: 25px;
     cursor: pointer;
 }
 
 button:hover {
     background-color: black;
     color: white;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 12px;
+    font-size: 12px;
+    height: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.5;
 }

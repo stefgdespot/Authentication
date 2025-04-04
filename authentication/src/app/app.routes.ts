@@ -4,6 +4,7 @@ import { SignupComponent } from './signup/signup.component';
 import { VerificationComponent } from './verification/verification.component';
 import { HomeComponent } from './home/home.component';
 import { SuccessComponent } from './success/success.component';
+import { authGuard } from './auth.guard';
 
 export const routes: Routes = [
     {
@@ -24,6 +25,7 @@ export const routes: Routes = [
     },
     {
         path: "success",
-        component: SuccessComponent
+        component: SuccessComponent,
+        canActivate: [authGuard]
     }
 ];
