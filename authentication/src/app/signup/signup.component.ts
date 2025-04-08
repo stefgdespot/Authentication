@@ -22,12 +22,10 @@ export class SignupComponent {
     const password = this.passwordInput.nativeElement.value
 
     this.authService.signUp(email, password)
-    .then(() => {
-      alert("Bruger oprettet!")
-      console.log("Bruger har oprettet kontoen:" + email)
-      
-      this.router.navigateByUrl("/success")
-    })
-    .catch(error => console.error("Fejl: " + error.message))
+      .then(() => {
+        alert("Bruger oprettet! Tjek din email for at bekræfte kontoen.")
+        this.router.navigateByUrl("/success")
+      })
+      .catch(error => console.error("Fejl: " + error.message))
   }
 }

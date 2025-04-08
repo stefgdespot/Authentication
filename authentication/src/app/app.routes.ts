@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { VerificationComponent } from './verification/verification.component';
 import { HomeComponent } from './home/home.component';
 import { SuccessComponent } from './success/success.component';
 import { authGuard } from './auth.guard';
@@ -18,10 +17,6 @@ export const routes: Routes = [
     {
         path: "signup",
         component: SignupComponent
-    },
-    {
-        path: "verification",
-        component: VerificationComponent
     },
     {
         path: "success",

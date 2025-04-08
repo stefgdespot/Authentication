@@ -22,12 +22,17 @@ export class LoginComponent {
     const password = this.passwordInput.nativeElement.value
 
     this.authService.login(email, password)
-    .then(() => {
-      alert("Bruger logget ind!")
-      console.log("Bruger logget ind som: " + email)
-      
-      this.router.navigateByUrl("/success")
-    })
-    .catch(error => console.error("Fejl: " + error.message))
+      .then(userCredential => {
+        const user = userCredential.user
+
+        if (user.emailVerified) {
+          alert("Bruger logget ind!")
+          console.log("Bruger logget ind som: " + email)
+          this.router.navigateByUrl("/success")
+        } else {
+          alert("Bekræft din email først. Tjek din indbakke 📬")
+        }
+      })
+      .catch(error => console.error("Fejl: " + error.message))
   }
 }

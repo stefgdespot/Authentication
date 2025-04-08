@@ -10,10 +10,11 @@ export const authGuard: CanActivateFn = () => {
   const router = inject(Router);
 
   return authState(auth).pipe(
-    map((user) => {
-      if (user) {
+    map(user => {
+      if (user && user.emailVerified) {
         return true;
       } else {
+        alert("Du skal være logget ind og have bekræftet din email.")
         return router.createUrlTree(['/login']);
       }
     })
